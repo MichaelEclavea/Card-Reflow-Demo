@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
+import { ChoiceGroup } from '@fluentui/react/lib/ChoiceGroup';
 import { Label } from '@fluentui/react/lib/Label';
 import { Icon } from '@fluentui/react/lib/Icon';
 import { Stack } from '@fluentui/react/lib/Stack';
@@ -12,7 +12,6 @@ const options = [
 
 export const Options = ({ setReflowOption }) => {
   const _onChange = (ev, option) => {
-    console.log('log', option.key, option.text);
     setReflowOption(option.text)
   }
 

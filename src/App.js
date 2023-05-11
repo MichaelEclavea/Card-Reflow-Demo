@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { Counter } from './components/counter/Counter';
 import { Options } from './components/options/Options';
 import { Slider } from '@fluentui/react/lib/Slider';
 import styles from './app.module.scss';
@@ -44,6 +44,7 @@ function App() {
           />
         </div>
         <Options setReflowOption={handleOptionSelection}/>
+        <Counter cardCount={cardCount} setCardCount={setCardCount}/>
       </div>
       <div className={styles.exampleContainer} style={{ width: `${sliderValue}%` }}>
         <Cards cardCount={cardCount} reflowOption={reflowOption} />
