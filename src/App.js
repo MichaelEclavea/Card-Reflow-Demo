@@ -6,8 +6,8 @@ import styles from './app.module.scss';
 import Cards from './components/cards/Cards';
 
 function App() {
-  const [cardCount, setCardCount] = useState(6);
-  const [reflowOption, setReflowOption] = useState(null);
+  const [cardCount, setCardCount] = useState(7);
+  const [reflowOption, setReflowOption] = useState('Static');
   const [sliderValue, setSliderValue] = useState(100);
 
   const sliderOnChange = (value) => {
