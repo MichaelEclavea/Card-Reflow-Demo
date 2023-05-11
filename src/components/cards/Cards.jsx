@@ -5,15 +5,10 @@ import styles from './cards.module.scss';
 const Cards = ({ cardCount, reflowOption }) => {
   const cardContainerRef = useRef();
 
-  // Listener for container ref size change.
-  useEffect(() => {
-    updateControlledCards();
-  }, [cardContainerRef])
-
   // Placeholder(invisible) cards when in controlled reflow.
   const _cardPlaceHolder = () => {
     return (
-      <div className={styles.cardPlaceHolder} />
+      <div className={styles.cardPlaceHolder} key={Math.floor(Math.random() * 100)} />
     )
   }
 

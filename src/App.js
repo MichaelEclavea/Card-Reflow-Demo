@@ -4,6 +4,8 @@ import { Options } from './components/options/Options';
 import { Slider } from '@fluentui/react/lib/Slider';
 import styles from './app.module.scss';
 import Cards from './components/cards/Cards';
+import { Header } from './components/header/Header';
+import { SliderController } from './components/slider/SliderController';
 
 function App() {
   const [cardCount, setCardCount] = useState(7);
@@ -11,7 +13,7 @@ function App() {
   const [sliderValue, setSliderValue] = useState(100);
 
   const sliderOnChange = (value) => {
-    if (value >= 5) {
+    if (value >= 7) {
       setSliderValue(value);
     }
     return;
@@ -24,30 +26,36 @@ function App() {
   const sliderAriaValueText = (value) => `${value} percent`;
   const sliderValueFormat = (value) => `${value}%`;
 
+  const renderComponentPane = () => {
+    return (
+      <div className={styles.controlPane}>
+        <div className={styles.paneHeader}>
+          <strong>Demo Controls</strong>
+        </div>
+        <div className={styles.paneSection}>
+          <SliderController ariaValue={sliderAriaValueText} valueFormat={sliderValueFormat} changeHandler={sliderOnChange} />
+          <hr></hr>
+        </div>
+
+        <div className={styles.paneSection}>
+          <Options setReflowOption={handleOptionSelection} />
+        </div>
+        <hr></hr>
+        <div className={styles.paneSection}>
+          <Counter cardCount={cardCount} setCardCount={setCardCount} />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.app}>
-      <header className={styles.appHeader}>
-        This is using flexbox to manage card styling.
-      </header>
-      <div style={{ height: '100px', width: '100%', border: '1px solid black', display: 'flex' }}>
-        <div>
-          <Slider
-            styles={{ root: { cursor: 'pointer' } }}
-            label="Adjust cards container to trigger reflow"
-            max={100}
-            min={4}
-            defaultValue={100}
-            ariaValueText={sliderAriaValueText}
-            valueFormat={sliderValueFormat}
-            onChange={sliderOnChange}
-            showValue
-          />
+      <Header />
+      <div className={styles.appBody}>
+        {renderComponentPane()}
+        <div className={styles.exampleContainer} style={{ width: `${sliderValue}%` }}>
+          <Cards cardCount={cardCount} reflowOption={reflowOption} />
         </div>
-        <Options setReflowOption={handleOptionSelection}/>
-        <Counter cardCount={cardCount} setCardCount={setCardCount}/>
-      </div>
-      <div className={styles.exampleContainer} style={{ width: `${sliderValue}%` }}>
-        <Cards cardCount={cardCount} reflowOption={reflowOption} />
       </div>
     </div>
   );
