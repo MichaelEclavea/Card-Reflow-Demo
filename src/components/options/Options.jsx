@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ChoiceGroup } from '@fluentui/react/lib/ChoiceGroup';
 import { Label } from '@fluentui/react/lib/Label';
-import { Icon } from '@fluentui/react/lib/Icon';
 import { Stack } from '@fluentui/react/lib/Stack';
 
 const options = [
@@ -19,8 +18,7 @@ export const Options = ({ setReflowOption }) => {
     <div>
       <Label>
         <Stack horizontal verticalAlign="center">
-          <span>Reflow Options&nbsp;&nbsp;</span>
-          <Icon iconName="Filter" />
+          <strong>Reflow Options&nbsp;&nbsp;</strong>
         </Stack>
       </Label>
       <ChoiceGroup
