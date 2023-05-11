@@ -1,0 +1,71 @@
+@import '@fluentui/react/dist/sass/ThemingSass.scss';
+
+$elevation4: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+$elevation8: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+$elevation16: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: auto;
+}
+
+.cardRoot {
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  box-shadow: $elevation8;
+  height: 160px;
+  width: 240px;
+  background-color: $ms-color-white;
+  color: $ms-color-neutralDark;
+  margin: 6px;
+  text-align: center;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    box-shadow: $elevation16;
+  }
+}
+
+.cardGrowOne {
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.titleContainer {
+  padding: 0px 16px;
+}
+
+.imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid white;
+  & > image {
+    min-height: 90px;
+    width: auto;
+    border-radius: 8px;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.cardButton {
+  border-radius: 6px;
+}
