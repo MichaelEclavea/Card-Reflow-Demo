@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { css } from '@fluentui/react/lib/Utilities';
 import styles from './cards.module.scss';
 
-const Cards = ({ cardCount, reflowOption }) => {
+const Cards = ({ cardCount, reflowOption, sliderValue }) => {
   const cardContainerRef = useRef();
   const [cardList, setCardList] = useState([]);
   const [placeholderCount, setPlaceholderCount] = useState(0);
@@ -15,7 +15,7 @@ const Cards = ({ cardCount, reflowOption }) => {
     if (reflowOption === 'Controlled') {
       _validatePlaceholders();
     }
-  }, [cardContainerRef.current?.offsetWidth]);
+  }, [sliderValue]);
 
   const _validatePlaceholders = () => {
     const currentCount = updateControlledCards();

@@ -13,7 +13,7 @@ function App() {
   const [sliderValue, setSliderValue] = useState(100);
 
   const sliderOnChange = (value) => {
-    if (value >= 5) {
+    if (value >= 7) {
       setSliderValue(value);
     }
     return;
@@ -53,7 +53,7 @@ function App() {
       <div className={styles.appBody}>
         {renderComponentPane()}
         <div className={styles.exampleContainer} style={{ width: `${sliderValue}%` }}>
-          <Cards cardCount={cardCount} reflowOption={reflowOption} />
+          <Cards cardCount={cardCount} reflowOption={reflowOption} sliderValue={sliderValue} />
         </div>
       </div>
     </div>
