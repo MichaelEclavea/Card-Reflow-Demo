@@ -14,8 +14,7 @@ export const SliderController = ({ ariaValue, changeHandler, valueFormat }) => {
       <Slider
         className={styles.sliderControl}
         max={100}
-        min={5}
-        step={5}
+        min={7}
         defaultValue={100}
         ariaValueText={ariaValue}
         valueFormat={valueFormat}
