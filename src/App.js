@@ -36,7 +36,6 @@ function App() {
           <SliderController ariaValue={sliderAriaValueText} valueFormat={sliderValueFormat} changeHandler={sliderOnChange} />
           <hr></hr>
         </div>
-
         <div className={styles.paneSection}>
           <Options setReflowOption={handleOptionSelection} />
         </div>
