@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cardreflowdemo/static/css/main.d9fed088.css",
+    "main.js": "/cardreflowdemo/static/js/main.c57ed337.js",
+    "index.html": "/cardreflowdemo/index.html",
+    "main.d9fed088.css.map": "/cardreflowdemo/static/css/main.d9fed088.css.map",
+    "main.c57ed337.js.map": "/cardreflowdemo/static/js/main.c57ed337.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9fed088.css",
+    "static/js/main.c57ed337.js"
+  ]
+}
