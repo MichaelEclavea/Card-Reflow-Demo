@@ -1,6 +1,7 @@
 {
   "name": "cardreflowdemo",
   "version": "0.1.0",
+  "homepage": "https://michaeleclavea.github.io/cardreflowdemo",
   "private": true,
   "dependencies": {
     "@fluentui/react": "^8.109.3",
@@ -16,9 +17,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "gh-pages -d public",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +46,5 @@
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "homepage": "https://michaeleclavea.github.io/cardreflowdemo"
+  "license": "ISC"
 }
