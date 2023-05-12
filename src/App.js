@@ -8,12 +8,12 @@ import { Header } from './components/header/Header';
 import { SliderController } from './components/slider/SliderController';
 
 function App() {
-  const [cardCount, setCardCount] = useState(7);
+  const [cardCount, setCardCount] = useState(5);
   const [reflowOption, setReflowOption] = useState('Static');
   const [sliderValue, setSliderValue] = useState(100);
 
   const sliderOnChange = (value) => {
-    if (value >= 7) {
+    if (value >= 5) {
       setSliderValue(value);
     }
     return;
