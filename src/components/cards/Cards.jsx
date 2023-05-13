@@ -6,6 +6,7 @@ const Cards = ({ cardCount, reflowOption, sliderValue }) => {
   const cardContainerRef = useRef();
   const [cardList, setCardList] = useState([]);
   const [placeholderCount, setPlaceholderCount] = useState(0);
+  let windowSize = window.innerWidth;
 
   useEffect(() => {
     _renderCardList()
@@ -16,6 +17,13 @@ const Cards = ({ cardCount, reflowOption, sliderValue }) => {
       _validatePlaceholders();
     }
   }, [sliderValue]);
+
+  useEffect(() => {
+    if (windowSize !== window.innerWidth) {
+      windowSize = window.innerWidth;
+    }
+    return () => windowSize = null;
+  }, [window.innerWidth])
 
   const _validatePlaceholders = () => {
     const currentCount = updateControlledCards();
@@ -54,7 +62,12 @@ const Cards = ({ cardCount, reflowOption, sliderValue }) => {
   }
 
   const updateControlledCards = () => {
-    const cardArea = 240 + 12; // Single card (flex-basis) + (left & right margins).
+    let cardArea = null;
+    if (windowSize > 640) {
+      cardArea = 240 + 12; // Single card (flex-basis) + (left & right margins).
+    } else {
+      cardArea = 110 + 6;
+    }
     const containerWidth = Math.floor(cardContainerRef.current.offsetWidth);
     const maxCardsInRow = Math.floor(containerWidth / cardArea);
     const placeholderCount = divisibleGenerator(cardCount, maxCardsInRow);
