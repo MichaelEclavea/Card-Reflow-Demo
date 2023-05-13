@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cardreflowdemo/static/css/main.d9fed088.css",
-    "main.js": "/cardreflowdemo/static/js/main.1fcfa408.js",
+    "main.css": "/cardreflowdemo/static/css/main.4dd4b15f.css",
+    "main.js": "/cardreflowdemo/static/js/main.b8824910.js",
     "index.html": "/cardreflowdemo/index.html",
-    "main.d9fed088.css.map": "/cardreflowdemo/static/css/main.d9fed088.css.map",
-    "main.1fcfa408.js.map": "/cardreflowdemo/static/js/main.1fcfa408.js.map"
+    "main.4dd4b15f.css.map": "/cardreflowdemo/static/css/main.4dd4b15f.css.map",
+    "main.b8824910.js.map": "/cardreflowdemo/static/js/main.b8824910.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9fed088.css",
-    "static/js/main.1fcfa408.js"
+    "static/css/main.4dd4b15f.css",
+    "static/js/main.b8824910.js"
   ]
 }
